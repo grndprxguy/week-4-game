@@ -1,0 +1,7 @@
+#crystal1, #crystal2, #crystal3, #crystal4 {
+	background-color: blue;
+	width: 100px;
+	height: 100px;
+	margin: 5px;
+	float: left;
+}
