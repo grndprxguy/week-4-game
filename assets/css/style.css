@@ -1,3 +1,22 @@
+body {
+	background-image: url('../images/background.jpg');
+}
+
+h1 {
+	background-color: orange;
+	font-size: 150%;
+	font-style: bolder;
+	color: white;
+	width: 25%;
+	margin: 10px;
+}
+
+#instructions {
+	background-color: #fae6ce;
+	width:25%;
+	color: green;
+}
+
 #crystal1, #crystal2, #crystal3, #crystal4 {
 	background-color: blue;
 	width: 100px;

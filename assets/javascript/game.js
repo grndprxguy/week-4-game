@@ -1,17 +1,13 @@
 var wins = 0;
 var losses = 0;
+var total = 0;
 
 $(document).ready(function() {
-
-
-	function game(){
-	// variables
-	var total = 0;
 	// set game number between 19-120
 	var gameNum = random();
 	function random() {return Math.ceil(Math.random() * (120 - 19) + 19);};
 	// function to set crystal value 1-12
-	var rand = function() {return Math.ceil(Math.random() * (12 - 1) + 1);};
+	function rand() {return Math.ceil(Math.random() * (12 - 1) + 1);};
 	// set crystal values
 	var crystals = {
 		crystal1: rand(),
@@ -25,26 +21,32 @@ $(document).ready(function() {
 		if (total == gameNum) {
 		wins++;	
 		alert("Congrats, you win!");
-		$("#winCount").text(wins);
-		game();
+		$("#winCount").text("Wins: "+wins);
+		total = 0;
+		reset();
 		}
-		else if (total > gameNum) {
+		if (total > gameNum) {
 		losses++;
 		alert("You Lose");
-		$("losecount").text(losses);
-		game();
+		$("#loseCount").text("Losses: "+losses);
+		total = 0;
+		reset();
 		}
 	}
-	
-	// push gameNum to html
+
+	// reset total, generate new number
+	function reset() {
+		total = 0;
+		random();
+		$("#random").text(gameNum);
+	}
+
 	$("#random").text(gameNum);
-	
 	// push clicked crystal to crystalValue
 	$(".container").on('click',"div", function(){ 
 		var crystalClick = $(this).attr('id');
 		$("#totalScore").text(total += crystals[crystalClick]);
+		console.log(total);
 		gameover();
 	});	
-};
-game();
 });
