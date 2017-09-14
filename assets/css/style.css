@@ -15,12 +15,70 @@ h1 {
 	background-color: #fae6ce;
 	width:25%;
 	color: green;
+	margin: 10px;
 }
 
-#crystal1, #crystal2, #crystal3, #crystal4 {
-	background-color: blue;
+#random {
 	width: 100px;
-	height: 100px;
-	margin: 5px;
+	height: 40px;
+	background-color: green;
+	margin: 10px;
 	float: left;
 }
+
+.winLoss {
+	background-color: #4afdfe;
+	width: 50px;
+	float: left;
+
+}
+
+.container {
+	float: left;
+}
+#crystal1, #crystal2, #crystal3, #crystal4 {
+	background-color: white;
+	width: 75px;
+	height: 75px;
+	margin: 10px;
+	float: left;
+}
+
+#crystal1 {
+	background-image: url('../images/gem.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+#crystal2 {
+	background-image: url('../images/sapphire.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+#crystal3 {
+	background-image: url('../images/amethyst.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+#crystal4 {
+	background-image: url('../images/gemstone.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+#score, #totalScore {
+	background-color: #2ca194;
+	width: 125px;
+	margin: 10px;
+}
+
+#totalScore {
+	height: 125px;
+	margin: 10px;
+}
+
