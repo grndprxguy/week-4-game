@@ -3,6 +3,11 @@ var losses = 0;
 var total = 0;
 
 $(document).ready(function() {
+
+	$("#instructionsText").hide();
+		$("#instructions").click(function() {
+			$(this).next().toggle("slow");
+		})
 	// set game number between 19-120
 	var gameNum = random();
 	function random() {return Math.ceil(Math.random() * (120 - 19) + 19);};
