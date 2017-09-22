@@ -4,10 +4,12 @@ var total = 0;
 
 $(document).ready(function() {
 
+	// show or hide instructions 
 	$("#instructionsText").hide();
 		$("#instructions").click(function() {
 			$(this).next().toggle("slow");
-		})
+	})
+	
 	// set game number between 19-120
 	var gameNum = random();
 	function random() {return Math.ceil(Math.random() * (120 - 19) + 19);};
@@ -21,7 +23,7 @@ $(document).ready(function() {
 		crystal4: rand(),
 		}
 
-	// gameover logic
+	// gameover win lose logic
 	function gameover(){
 		if (total == gameNum) {
 		wins++;	
@@ -51,7 +53,6 @@ $(document).ready(function() {
 	$(".container").on('click',"div", function(){ 
 		var crystalClick = $(this).attr('id');
 		$("#totalScore").text(total += crystals[crystalClick]);
-		console.log(total);
 		gameover();
 	});	
 });
